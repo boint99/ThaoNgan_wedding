@@ -257,7 +257,7 @@ hr {
   height: 100%;
   width: 100%;
   position: absolute;
-  background-color: #9A717A;
+  background-color: rgba(157, 134, 140, 0.7882352941);
   background-size: cover;
   background-position: 50%;
   top: 0;
