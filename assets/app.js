@@ -20,6 +20,7 @@ submitBtn.addEventListener("submit", (e) => {
   setTimeout(() => {
     location.reload()
   }, 500);
+  
 });
 
 const fetchData = async () => {
