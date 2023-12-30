@@ -17,7 +17,9 @@ submitBtn.addEventListener("submit", (e) => {
     body: JSON.stringify(objectData),
   }).then((response) => response.json());
 
-  document.querySelector("#form-control").reset();
+  setTimeout(() => {
+    location.reload()
+  }, 500);
 });
 
 const fetchData = async () => {
