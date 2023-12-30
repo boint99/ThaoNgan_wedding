@@ -971,21 +971,18 @@ hr {
                 text-align: center;
                 max-width: 200px;
                 margin: 0 auto;
+                transition:all 0.25s;
+                &:hover {
+                    background-color: #EDA2B6;
+                    color: #fff;
+                }
             }
             
-            // &::after {
-            //     content: "";
-            //     position: absolute;
-            //     border-bottom: 1px solid #EDA2B6;
-            //     width: 500px;
-            //     padding-top: 30px;
-            // }
         }
         .wish-box { 
             margin: 0 3rem;
             max-height: 400px;
             overflow: hidden;
-            z-index: 10;
            .wish-box-item {
                 height: 100%;
                .name {
@@ -1022,6 +1019,7 @@ hr {
                 border-radius: 20px;
             }
             }
+           
         }
     }
 }

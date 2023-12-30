@@ -953,12 +953,16 @@ hr {
   text-align: center;
   max-width: 200px;
   margin: 0 auto;
+  transition: all 0.25s;
+}
+.guestbook .content .form .btn:hover {
+  background-color: #EDA2B6;
+  color: #fff;
 }
 .guestbook .content .wish-box {
   margin: 0 3rem;
   max-height: 400px;
   overflow: hidden;
-  z-index: 10;
 }
 .guestbook .content .wish-box .wish-box-item {
   height: 100%;

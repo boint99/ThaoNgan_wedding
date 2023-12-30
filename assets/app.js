@@ -1,5 +1,5 @@
 const submitBtn = document.querySelector("#form-control");
-const load = document.querySelector("#wish-box")
+const wishBox = document.querySelector("#wish-box")
 const navBar = document.querySelector(".header__nav--bar i");
 let imageTag = document.querySelector(".slide");
 
@@ -39,8 +39,7 @@ const fetchData = async () => {
       <p class="happy">${item.Describe}</p>
     </div>`
   ))
-  const divElement = document.querySelector(".wish-box");
-  divElement.innerHTML = data.join("")
+  wishBox.innerHTML = data.join("")
 };
 fetchData();
 
@@ -107,20 +106,3 @@ Fancybox.bind("[data-fancybox]", {
   },
 });
 Fancybox.defaults.showClass = "f-scaleIn";
-
-//end khỏi tao funcy box
-
-// if (inputData && textareaData) {
-//   let arrHTML = `
-//   <div class="wish-box-item">
-//       <strong class="name">${inputData}</strong>
-//       <p class="happy">${textareaData}</p>
-//   </div>
-//   `;
-//   let wishBox = document.querySelector(".wish-box");
-//   wishBox.insertAdjacentHTML("beforeend", arrHTML);
-//   document.querySelector("#form-control").reset();
-// }
-// else {
-//   alert("Vui lòng nhập thông tin của bạn vào đây")
-// }
