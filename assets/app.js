@@ -32,14 +32,15 @@ const fetchData = async () => {
     }
   );
   const result = await response.json();
-  const data = result.map(item => (
+  let data = result.reverse()
+  const dataFinal = data.map(item => (
 
   `<div class="wish-box-item">
       <strong class="name">${item.Name}</strong>
       <p class="happy">${item.Describe}</p>
     </div>`
   ))
-  wishBox.innerHTML = data.join("")
+  wishBox.innerHTML = dataFinal.join("")
 };
 fetchData();
 

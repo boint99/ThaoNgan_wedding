@@ -551,10 +551,7 @@ hr {
 .album__lists--item {
   width: 100%;
   height: 100%;
-  transition: all 0.25s ease-out;
-}
-.album__lists--item:hover {
-  transform: scale(1.1);
+  overflow: hidden;
 }
 .album__lists--item img {
   cursor: pointer;
@@ -563,11 +560,16 @@ hr {
   background-size: cover;
   object-fit: cover;
   border-radius: 10px;
+  aspect-ratio: 8/8;
+  transition: all 0.25s ease-out;
 }
 @media (max-width: 767.98px) {
   .album__lists--item img {
     margin-bottom: 20px;
   }
+}
+.album__lists--item img:hover {
+  transform: scale(1.1);
 }
 
 .modal {
@@ -615,12 +617,26 @@ hr {
   color: #fff;
   text-transform: uppercase;
 }
+@media (max-width: 576.98px) {
+  .event__head {
+    font-size: 32px;
+  }
+}
+.event__head::before {
+  content: "";
+  background: url(../images/icon-small-white.svg) no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-position: center;
+  top: 30%;
+  left: 0;
+}
 .event p {
   text-align: center;
   color: #fff;
   max-width: 500px;
-  margin: 0 auto;
-  padding-bottom: 50px;
+  margin: 20px auto;
 }
 .event__list {
   padding: 20px;
@@ -641,7 +657,7 @@ hr {
   color: #f37597;
 }
 .event__list--content time {
-  padding-bottom: 20px !important;
+  padding-bottom: 20px;
 }
 .event__list--content span {
   font-size: 17px;
@@ -650,6 +666,7 @@ hr {
 .event__list--content .address {
   color: #000;
   padding-bottom: 20px !important;
+  margin: 0;
 }
 .event__list--content .location {
   padding: 10px 0;

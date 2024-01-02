@@ -505,10 +505,8 @@ hr {
         &--item {
             width: 100%;
             height: 100%;
-            transition: all 0.25s ease-out;
-            &:hover {
-                transform: scale(1.1);
-            }
+            overflow: hidden;
+            
             img {
                 cursor: pointer;
                 width: 100%;
@@ -516,8 +514,13 @@ hr {
                 background-size: cover;
                 object-fit: cover;
                 border-radius: 10px;
+                aspect-ratio: 8/8;
+                transition: all 0.25s ease-out;
                 @include repond (phones-land) {
                     margin-bottom: 20px;
+                }
+                &:hover {
+                    transform: scale(1.1);
                 }
             }
         }
@@ -566,13 +569,25 @@ hr {
         padding-bottom: 20px;
         color: #fff;
         text-transform: uppercase;
+        @include repond(phones-portrait) {
+            font-size: 32px;
+        }
+        &::before {
+            content: "";
+            background: url(../images/icon-small-white.svg) no-repeat;
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            background-position: center;
+            top: 30%;
+            left: 0;
+        }
     }
     p {
         text-align: center;
         color: #fff;
         max-width: 500px;
-        margin:  0 auto;
-        padding-bottom: 50px;
+        margin:  20px auto;
     }
 
     &__list {
@@ -595,7 +610,7 @@ hr {
                 color: #f37597;
             }
             time {
-                padding-bottom: 20px !important;
+                padding-bottom: 20px;
             }
             span {
                 font-size: 17px;
@@ -604,6 +619,7 @@ hr {
             .address {
                 color: #000;
                 padding-bottom: 20px !important;
+                margin: 0;
             }
             .location {
                 padding: 10px 0;
