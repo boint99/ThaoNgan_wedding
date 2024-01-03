@@ -107,3 +107,25 @@ Fancybox.bind("[data-fancybox]", {
   },
 });
 Fancybox.defaults.showClass = "f-scaleIn";
+
+//audio
+const control = document.querySelectorAll(".volume")
+const audio = document.getElementById("audio");
+
+control.forEach(element => {
+  element.addEventListener("click", ()=> {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    } 
+    control.forEach(control => {
+      control.classList.remove("active")
+    });
+    element.classList.add("active")
+  })
+});
+//end audio
+
+
+

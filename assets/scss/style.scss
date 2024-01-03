@@ -769,16 +769,6 @@ hr {
         max-width: 100%;
         text-align: center;
         padding: 5rem;
-
-        // &::before {
-        //     content: "";
-        //     background: url(" data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='189' height='26' viewBox='0 0 189 26'%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23fff' stroke-width='1.5px' d='M86.19%2C2.362L96.98%2C13%2C86.19%2C23.634%2C75.4%2C13Z'/%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23fff' stroke-width='1.5px' d='M94.985%2C2.362L105.775%2C13%2C94.985%2C23.634%2C84.2%2C13Z'/%3E%3Cpath fill='none' fill-rule='evenodd' stroke='%23fff' stroke-width='1.5px' d='M103.78%2C2.362L114.57%2C13%2C103.78%2C23.634%2C92.991%2C13Z'/%3E%3Cpath fill-rule='evenodd' fill='%23fff' d='M120%2C14V13H523v1H120Z'/%3E%3Cpath fill-rule='evenodd' fill='%23fff' d='M-331%2C14V13H69v1H-331Z'/%3E%3C/svg%3E") no-repeat center;
-        //     position: absolute;
-        //     width: 100%;
-        //     height: 100%;
-        //     left: 0;
-        //     top: 25%;
-        // }
     }
     .invite {
         text-align: center;
@@ -864,34 +854,6 @@ hr {
                     padding:0;
                 }
             }
-            // &::before {
-            //     content: "";
-            //     background: url(../images/icon.svg) no-repeat center;
-            //     width: 100%;
-            //     height: 30px;
-            //     position: absolute;
-            //     bottom: 100px;
-            //     left: 0;
-            //     @include repond(phones-land) {
-            //         bottom: 10%;
-            //     }
-            //     @include repond(phones-portrait) {
-            //         bottom: 15%;
-            //     }
-            // }
-            // &::after {
-            //     content: "";
-            //     background: url(../images/icon.svg) no-repeat center;
-            //     width: 100%;
-            //     height: 30px;
-            //     position: absolute;
-            //     left: 0;
-            //     bottom: 30px;
-            //     @include repond(phones-portrait) {
-            //         bottom: 0;
-            //         top: 100%;
-            //     }
-            // }
         }
     }
 }
@@ -913,29 +875,6 @@ hr {
        @include repond(phones-portrait) {
         padding: 0 5px;
        }
-    //    position: relative;
-    //    &::before {
-    //         content: "";
-    //         background: url(../images/flower-large.svg) no-repeat;
-    //         position: absolute;
-    //         width: 900px;
-    //         height: 600px;
-    //         z-index: -1;
-    //         top: -15%;
-    //         left: -43%;
-    //         transform: rotate(351deg);
-    //    }
-    //    &::after {
-    //         content: "";
-    //         background: url(../images/flower-large.svg) no-repeat;
-    //         position: absolute;
-    //         width: 850px;
-    //         height: 581px;
-    //         z-index: -1;
-    //         top: 60%;
-    //         left: 6%;
-    //         transform: rotate(176deg);
-    //    }
         .form {
             height: 100%;
             border: none;
@@ -1084,6 +1023,59 @@ hr {
 
         span {
             color: #fff;
+        }
+    }
+}
+
+ @-webkit-keyframes pulsate-bck {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes pulsate-bck {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+  
+.section-audio {
+    position: fixed;
+    bottom: 100px;
+    left: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    cursor: pointer;
+    -webkit-animation: pulsate-bck 0.5s ease-in-out infinite both;
+	        animation: pulsate-bck 0.5s ease-in-out infinite both;
+    i {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        left: 0;
+        font-size: 25px;
+        color: #fc245e;
+        &.active {
+            display: none;
         }
     }
 }

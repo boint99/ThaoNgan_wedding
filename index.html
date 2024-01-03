@@ -54,7 +54,9 @@
             </div>
         </div>
     </header>
-
+    <audio id="audio" autoplay loop>
+        <source src="./assets/mp3/Nhac.mp3">
+    </audio>
     <section class="section-1">
         <div class="container">
             <div class="show">
@@ -116,7 +118,7 @@
                     <div class="col-lg-12">
                         <div class="content">
                             <h2 class="title">Chuyện tình yêu</h2>
-                           
+                           <!-- không có cuộc tình nào -->
                         </div>
                     </div>
                 </div>
@@ -182,12 +184,10 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-end">
                     <div class="event__list text-center wow animate__slideInLeft" data-wow-duration="1s" data-wow-delay="0s">
                         <div class="event__list--photo">
-                            <img src="./assets/images/bride.jpeg"
-                            
-                             alt="">
+                            <img src="./assets/images/bride.jpeg" alt="">
                         </div>
                         <div class="event__list--content">
-                            <h3>LỄ CƯỚI NHÀ NỮ</h3>
+                            <h3>LỄ CƯỚI NHÀ GÁI</h3>
                             <div class="time">
                                 <i class="fa-regular fa-clock"></i>
                                 <span> 18:00 PM 08/03/2024</span>
@@ -195,9 +195,9 @@
                             <div class="location">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
-                            <p class="address">Tư gia nhà nữ</p>
+                            <p class="address">Tư gia nhà gái</p>
                         </div>
-                        <a href="" class="event__list--button btn">Xem bản đồ</a>
+                        <a href="https://maps.app.goo.gl/Ap8ddUXajC8Lm8q18" target="_blank" class="event__list--button btn">Xem bản đồ</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-start">
@@ -206,7 +206,7 @@
                             <img src="./assets/images/groom.jpeg" alt="">
                         </div>
                         <div class="event__list--content">
-                            <h3>LỄ CƯỚI NHÀ NAM</h3>
+                            <h3>LỄ CƯỚI NHÀ TRAI</h3>
                             <div class="event__list--time">
                                 <i class="fa-regular fa-clock"></i>
                                 <span> 10:00 AM 09/03/2024</span>
@@ -214,9 +214,9 @@
                             <div class="location">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
-                            <p class="address">Tư gia nhà Nam</p>
+                            <p class="address">Tư gia nhà trai</p>
                         </div>
-                        <a href="" class="event__list--button btn">Xem bản đồ</a>
+                        <a href="https://maps.app.goo.gl/kvD5FxNgYXzh3SjG6" target="_blank" class="event__list--button btn">Xem bản đồ</a>
                     </div>
                 </div>
            </div>
@@ -270,7 +270,6 @@
     </div>
  </section>
  <!-- end congratulations -->
-
  <!-- the-big-day -->
  <section class="the-big-day" id="the-big-day">
     <div class="bg-opcity"></div>
@@ -313,16 +312,17 @@
                     <hr>
                     <div class="wish-box" id="wish-box">
                         <!-- call api -->
-                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
  <!-- end the-big-day -->
-
+ <section class="section-audio" id="control-audio">
+    <i class="volume fa-solid fa-volume-xmark "></i>
+    <i class="volume fa-solid fa-volume-high active"></i>
+</section>
  <!-- footer -->
  <footer class="footer">
     <div class="footer__name">
@@ -331,12 +331,11 @@
         <h3 class="footer__name--item">Thảo Ngân</h3>
     </div>
  </footer>
- 
   <!-- end footer -->
-
-  <script src="https://wowjs.uk/dist/wow.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- script -->
+    <script src="https://wowjs.uk/dist/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <SCRIPT LANGUAGE = "Javascript">
         $(document).ready(function() {
@@ -350,5 +349,6 @@
     });
     </SCRIPT>
     <script src="./assets/app.js"></script>
+    <!-- end script -->
 </body>
 </html>
